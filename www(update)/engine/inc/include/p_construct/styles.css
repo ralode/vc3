@@ -1,0 +1,26 @@
+.vk_menu_td input:hover{ color: black; cursor: pointer;}
+
+/* Результаты проверки */
+#vc_cpl_list tr th {padding:0px 2px 0px;}
+#vc_cpl_list tr td {padding:2px 2px 2px; overflow: hidden;}
+#vc_cpl_list tr td.no_border {padding:0;}
+/* Уадление aaa */
+.vc_do_delete {height:14px; font-size:8px; width:13px; color:red; font-weight: bold;}
+
+.errors-all-text {width:100%;border-bottom: 2px dotted silver;margin-bottom:6px; padding: 6px; color:#666666;}
+.errors-all-text a { border: #666666 1px solid; padding:3px 10px; border-radius: 3px; cursor: pointer; background-color:#f0f0f0; }
+.errors-all-text a:hover {text-decoration: none; background-color: white; }
+.errors-all-text a.bt-active { background-color: #e7d9d9; cursor: default; }
+
+/* Верхнее меню в админке DLE10.2+ */
+.boxRational .action-nav-button {width: 120px !important;}
+.boxRational .action-nav-button.btn-active a {color: #cccccc;}
+.vkvTableMargin {margin: 10px;}
+
+/* Проверка сервера */
+#check_status {font-weight: bold;}
+.red {color:#c20b0b;}
+.green {color:#177e2a;}
+.orange {color: #ff5500;}
+.bold {font-weight: bold;}
+.gray {color:#8b8b8b;}

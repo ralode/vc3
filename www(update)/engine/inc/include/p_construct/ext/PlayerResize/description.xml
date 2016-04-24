@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension>
+    <!-- Имя и описание расширения: -->
+    <name>Изменение размеров плеера</name>
+    <description>Позволяет задавать размеры плеера отдельно для односерийного фильма, сериала и сериала с сезонами.</description>
+	<!-- Ссылка на страницу: -->
+    <link></link>
+    <!-- Имя на латинском, определяющее название файла и название класса: -->
+    <alt>PlayerResize</alt>
+    <!-- Стандартные настройки: -->
+    <config>
+        <enabled type="enum" 
+                name="Статус"
+                description = "Позволяет включить или отключить расширение."
+                list="0|Отключено||1|Включено"
+                preg_match="/^[01]$/">1</enabled>
+        <o_width type="string" 
+                 name="Ширина одиночного фильма" 
+                 description = "Ширина в пикселях или пусто, если не требуется изменять."
+                 preg_match="/^\d*$/">image</o_width>
+        <o_height type="string" 
+                 name="Ширина одиночного фильма" 
+                 description = "Ширина в пикселях или пусто, если не требуется изменять. "
+                 preg_match="/^\d*$/">image</o_height>
+        <s_width type="string" 
+                 name="Ширина сериала" 
+                 description = "Ширина в пикселях или пусто, если не требуется изменять. "
+                 preg_match="/^\d*$/">image</s_width>
+        <s_height type="string" 
+                 name="Ширина сериала" 
+                 description = "Ширина в пикселях или пусто, если не требуется изменять. "
+                 preg_match="/^\d*$/">image</s_height>
+        <m_width type="string" 
+                 name="Ширина мульти-сериала" 
+                 description = "Ширина в пикселях или пусто, если не требуется изменять. "
+                 preg_match="/^\d*$/">image</m_width>
+        <m_height type="string" 
+                 name="Ширина мульти-сериала" 
+                 description = "Ширина в пикселях или пусто, если не требуется изменять. "
+                 preg_match="/^\d*$/">image</m_height>
+    </config>
+</extension>

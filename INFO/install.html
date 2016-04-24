@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Install</title>
+        <meta charset="windows-1251">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <div style="font-weight:bold; border:1px solid silver; padding:10px; margin:10px 10px 10px 100px; border-radius:3px;" class="green">Если у вас трудности с установкой, можете посмотреть видео <a href="http://www.youtube.com/watch?v=n9ISpyqCIRA">тут</a>. для других DLE установка аналогичная, только отличается п. 10; добавляется п. 8 (на видео я этого не делал, т.к. ставил на OS Windows).</div>
+
+            <p><strong>(1).</strong> Скопировать файлы с категории "www" архива в корень вашего сайта.</p>
+            <p><strong>(2).</strong> Выполнить файл <span class="blue">/install_vc.php</span>, следовать инструкциям.</p>
+            <div style="font-weight:bold; border:1px solid silver; padding:10px; margin:10px 10px 10px 100px; border-radius:3px;" class="red">Во время установки скрипт предложит добавить доп. поле <span class="blue">pconstruct</span>, читайте инструкции. Обратите внимание, если у вас стояла версия скрипта 2.х, то поле имеет другое название и добавлять его обязательно!</div>
+            <p><strong>(3).</strong> В файле <span class="blue">/engine/engine.php</span><br>после кода:</p>
+            <textarea rows="1" style="width:100%">switch ( $do ) {</textarea>
+            <p>вставить:</p>
+            <textarea rows="3" style="width:100%">        case "videoconstructor" :
+		include ENGINE_DIR . '/inc/include/p_construct/video_constructor.php';
+		break;</textarea>
+
+            <p><strong>(4).</strong> В файле <span class="blue">/engine/inc/addnews.php</span><br><span class="red">перед</span> кодом:</p>
+            <textarea rows="6" style="width:100%">echofooter();
+
+} // ********************************************************************************
+// Do add News
+// ********************************************************************************
+elseif( $action == "doaddnews" ) {</textarea>
+            <p>вставить:</p>
+            <textarea rows="3" style="width:100%">// Парсер-конструктор видео для DLE
+include_once (ENGINE_DIR . '/inc/include/p_construct/newseditor/addnews_1.php');
+// // Парсер-конструктор видео для DLE</textarea>
+            <div style="font-weight:bold; border:1px solid silver; padding:10px; margin:10px 10px 10px 100px; border-radius:3px;" class="red">Обратите внимание в этом пункте(и в нескольких следующих) на инструкцию "перед кодом"! По этим ошибкам обычно много тикетов.</div>
+
+            <p>После:</p>
+            <textarea rows="1" style="width:100%">$row = $db->insert_id();</textarea>
+            <p>вставить:</p>
+            <textarea rows="3" style="width:100%">// Парсер-конструктор видео для DLE
+        include_once (ENGINE_DIR.'/inc/include/p_construct/newseditor/addnews_2.php');	
+        // // Парсер-конструктор видео для DLE</textarea>
+
+
+            <p><strong>(5).</strong> В файле <span class="blue">/engine/inc/editnews.php</span><br>
+                <span class="red">перед</span> кодом:</p>
+            <textarea rows="6" style="width:100%">	echofooter();
+} 
+// ********************************************************************************
+// Сохранение или удаление новости
+// ********************************************************************************
+elseif( $action == "doeditnews" ) {</textarea>
+            <p>вставить:</p>
+            <textarea rows="3" style="width:100%">        // Парсер-конструктор видео для DLE
+        include_once (ENGINE_DIR . '/inc/include/p_construct/newseditor/editnews_1.php');
+        // // Парсер-конструктор видео для DLE</textarea>
+            <p>После:</p>
+            <textarea rows="4" style="width:100%">		$xfieldsaction = "init";
+		$xfieldsid = $item_db[0];
+		include (ENGINE_DIR . '/inc/xfields.php');
+	}</textarea>
+            <p>вставить:</p>
+            <textarea rows="3" style="width:100%">// Парсер-конструктор видео для DLE
+	include_once (ENGINE_DIR . '/inc/include/p_construct/newseditor/editnews_2.php');
+	// // Парсер-конструктор видео для DLE</textarea>
+
+            <p><strong>(6).</strong> В файле <span class="blue">/engine/modules/show.full.php</span><br>
+            <div style="width:50%;float:left;">
+                <span class="red">перед</span> кодом (DLE<=10.0, DLE>=10.4):</p>
+                <textarea rows="4" style="width:95%">		$tpl->compile( 'content' );
+
+		if( $user_group[$member_id['user_group']]['allow_hide'] )...</textarea>
+            </div>
+            <div style="width:50%;float:right;">
+                <span class="red">перед</span> кодом (DLE 10.1-10.3):</p>
+                <textarea rows="4" style="width:95%">		$tpl->compile( 'content' );
+
+		$tpl->result['content'] = preg_replace_callback...</textarea>
+            </div>
+            <div style="clear:both;"></div>
+
+            <p>вставить:</p>
+            <textarea rows="4" style="width:100%">// Парсер-конструктор видео для DLE
+		include_once (ENGINE_DIR . '/inc/include/p_construct/inc.show.full.php');
+		// // Парсер-конструктор видео для DLE</textarea>
+
+            <p><strong>(7).</strong> В файле шаблона <span class="blue">fullstory.tpl</span> добавляем код вставки плеера, например так:</p>
+            <textarea rows="1" style="width:100%">[video-constructor]<div>{video-constructor}</div>[/video-constructor]</textarea>
+            <p>Тег обрабатывается так, как доп. поля в DLE: если в новость не добавлено ни одного фильма, 
+                то содержимое блока <code>[video-constructor]...[/video-constructor]</code> не показывается</p>
+
+            <p><strong>(8).</strong> Выставить права на запись (664 или 666) на файл:</p>
+            <ul><li>/engine/inc/include/p_construct/config.php</li></ul>
+            <p>и на все три файла в папке:</p>
+            <ul><li>/engine/inc/include/p_construct/ddata/</li></ul>
+
+            <p id="instruction9"><strong>(9).</strong> В файле <span class="blue">/engine/inc/preview.php </span> <span class="red">перед</span> кодом:</p>
+            <textarea rows="1" style="width:100%">echo $tpl->result['fullstory'];</textarea>
+            <p>вставить:</p>
+            <textarea rows="6" style="width:100%">// Парсер-конструктор видео для DLE
+        $_GET['newsid'] = $_GET['id'];
+        include_once (ENGINE_DIR . '/inc/include/p_construct/inc.show.full.php');
+        // // Парсер-конструктор видео для DLE
+        if ($CvBuffer!=='')
+            $tpl->result['fullstory'] .= "<div style='margin:8px auto;'>{$CvBuffer}</div>";</textarea>
+
+            <p><strong>(10).</strong> Обновление JQuery и Jquery UI для админке DLE (<strong>только для DLE 10.1 и ниже, если у вас более новая версия - пропустите этот адский пункт</strong>)</p>
+            <p>Для нормальной работы скрипта надо jQuery v1.8.3+ и компоненты Draggable, Resizable из JQueryUI.</p>
+            <p>Нужная версия JQuery уже стоит начиная с DLE 9.7. Исли у Вас старая версия DLE, обновите <span class="blue">/engine/classes/js/jquery.js</span> из папки <span class="blue">"Additional_files"</span> в архиве.</p>
+            <p>JQueryUI обновлять надо обязательно. Можно взять из папки <span class="blue">"Additional_files"</span> в архиве, а можно <strong><a href="#nolink">обновить самому</a></strong>.</p>
+            <p>1) Старый файл стиля <span class="blue">engine/skins/jquery-ui.css</span> бекапим (переименовываем) например в <span class="blue">jquery-ui.css.bak</span><br>
+                2) Копируем файл из архива <span class="blue">Additional_files/JQuery/UIjquery-ui.css</span> в директорию <span class="blue">/engine/skins/</span><br>
+                3) Файл <span class="blue">engine/classes/js/jqueryui.js</span> бекапим (переименовываем) например в <span class="blue">jqueryui.js.bak</span><br>
+                4) Копируем файл из архива <span class="blue">Additional_files/JQueryUI/jqueryui.js</span> в директорию <span class="blue">/engine/classes/js/</span></p>
+
+            <p><strong>(11).</strong> Переходим на страницу "Настройки" в админке скрипта, 
+                и вводим лицензионные данные: email и лицензионный ключ. Для демо-доступа оставляем стандартные
+                настройки (пропускаем этот пункт установки)<br>
+                E-mail: <strong>demo@ralode.com</strong><br>
+                Лицензионный ключ: <strong>demodemodemodemodemo</strong></p>
+
+            <p><strong>(12).</strong> Переходим на страницу "Информация" в админке скрипта, 
+                нажимаем ссылку "проверка" справа от "Поисковый сервер".</p>
+            <p>Скрипт проверит соединение, ответ поискового сервера и проверит авторизацию. 
+                Если все нормально, то выведет что-то вроде:</p>
+            <textarea rows="6" style="width:100%">Проверка закончена.
+
+Лицензионный ключ:	Валидный
+Домен:	OK
+Срок действия лицензии:	365 дней
+Авторизация Вконтакте:	 НЕТ</textarea>
+            <p>Если вы вводили свой личный лицензионный ключ, то при первом запуске скрипт выдяст "Авторизация Вконтакте:	 НЕТ. " В этом случае надо перейти по  <a href="#http://s4.6prog.net:8801/authorization">ссылке</a> и авторизоваться (только 1 раз на все время пользования), заполнив небольшую форму. В тот аккаунт, с которого вы авторизуетесь  и будут сохраняться видео при поиске Вконтакте в ваши видеозаписи. Затем перезагрузите страницу проверки.</p>
+            <p>Если вы оставили демонстрационный ключ, то авторизоваться не надо.</p>
+
+            <p>Если сервер выдал "Успешно." - значит, что авторизация на сервере прошла успешно и можно пользоваться скриптом.</p>
+
+            <p><strong><em>Внимание! Если в будущем при использовании скрипта у вас откажет поиск Вконтакте, то зайдите в "Проверку". Вероятнее всего вы розавторизовались на приложении ВК, и вам надо пройти авторизацию снова по той же <a href="#http://s4.6prog.net:8801/authorization">ссылке</a>.</em></strong></p>
+
+            <p><strong>(13).</strong> Готово! Если все прошло без проблем, то конструктор видео для DLE установлен :). </p>
+        </div>
+    </body>
+</html>

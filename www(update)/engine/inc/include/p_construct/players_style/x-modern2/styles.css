@@ -1,0 +1,40 @@
+.ButtonLft {float:left; background: url(img/left.png) no-repeat;
+    border-radius: 4px 0 0 4px;}
+.ButtonLft:hover {background: url(img/left_hov.png) no-repeat;}
+.rl-lenta {width:33300px; margin:0;}
+.ButtonRgh {float:right; background: url(img/right.png) no-repeat; 
+    border-radius: 0 4px 4px 0;}
+.ButtonRgh:hover {background: url(img/right_hov.png) no-repeat;}
+.RlItem {float:left; display:block; color: #f8f8f8; border:1px solid #898989; padding:2px; margin:0 2px 0; cursor:pointer; border-radius: 3px;}
+.RlItem:hover {color: #a9b186; border-color: #393939;}
+.serie-active {color: #9e9f9e; background-color:#101010;}
+.playerCode {width:100%; clear:both; margin:0;}
+
+#rl-buttons-top {height: 29px;}
+#rl-buttons-top .buttonLR {width:29px; height: 29px;}
+
+/* Поправка на ветер */
+.RlVisor {width:100%;}
+
+/* Стиль переключателей серий влево-вправо */
+.rl-modern-buttons {width:550px; margin:0 auto 0;}
+.rl-modern-buttons #vc-player-selectbox {width:366px; height:35px; margin:12px auto 0; float:left; font-size:20px; border:1px solid #898989; background-color: #2c2c2c; color:#eaeaea; padding: 0 0 0 10px;}
+.rl-modern-buttons .buttonLR {margin-top:5px; border:1px solid #898989;}
+.rl-modern-buttons .ButtonLft {margin-right:25px; background:url(img/bt_left.png) 15px 8px no-repeat; }
+.rl-modern-buttons .ButtonLft:hover {background-image:url(img/bt_left_hover.png); border-color: #393939;}
+.rl-modern-buttons .ButtonRgh {margin-left:25px; background:url(img/bt_right.png) 18px 8px no-repeat;}
+.rl-modern-buttons .ButtonRgh:hover {background-image:url(img/bt_right_hover.png); border-color: #393939;}
+
+/* Стиль типа default */
+
+
+
+/* Блок жалоб */
+#vc-complait-box { float:right; }
+/* Ссылка "Пожаловаться на видео" */
+#CvComplaintShowModal {} 
+/* Форма отправки жалобы*/
+#vc-complait-dialog div:last-child {padding-top:8px;}
+#cv_complaint_text {width:330px; height:70px; opacity:0.25; resize:none; outline: none; overflow: auto;}
+
+

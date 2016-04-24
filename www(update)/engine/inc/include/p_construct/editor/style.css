@@ -1,0 +1,466 @@
+.VcZborka {
+    padding: 10px;
+    border: 1px solid #eef0ff;
+    border-left: 4px solid #d8824b;
+    width: 770px;
+    border-radius: 4px;
+    margin-bottom: 7px;
+}
+
+#VcConteiner .vc_item {
+    padding: 2px;
+    background-color: #f4f8f9;
+    border: 1px solid #b2bbbd;
+    border-radius: 3px;
+    margin: 2px 5px 2px;
+    height: 22px;
+    margin-left: 20px;
+    width: 722px;
+    box-sizing: content-box;
+}
+
+.vc_item_placeholder {
+    padding: 2px;
+    background-color: #d8824b;
+    border: 1px dashed #2e2e2e;
+    border-radius: 3px;
+    margin: 2px 5px 2px;
+    height: 22px;
+    margin-left: 20px;
+    width: 722px;
+}
+.vc_slist_empty {
+    padding: 2px;
+    background-color: #f6ac5e;
+    border: 1px dashed #2e2e2e;
+    border-radius: 3px;
+    margin: 2px 5px 2px;
+    height: 22px;
+    margin-left: 20px;
+    width: 722px;
+    color: red;
+    padding-left: 25px;
+}
+
+.vc_connected {
+    list-style-type: none;
+    display: block;
+    padding: 0px;
+    margin: 0px;
+}
+
+.vc_num {
+    width: 28px;
+    font-weight: bold;
+    display: block;
+    float: left;
+    margin-right: 4px;
+    cursor: pointer;
+    margin-top: 3px;
+}
+input.vc_sname {
+    width: 230px;
+    max-width: 230px;
+    display: block;
+    float: left;
+    max-height: 22px;
+    line-height: 21px;
+}
+.input_orange{
+    border:1px solid #d73e1c !important;
+}
+input.vc_scode {
+    width: 250px;
+    max-width: 250px;
+    margin-left: 5px;
+    display: block;
+    float: left;
+    max-height: 22px;
+    line-height: 21px;
+}
+.vc_apic { /* Ссылка с картинкой: Вк, Ред, Жалобы... */
+    width: 18px;
+    height: 18px;
+    display: block;
+    float: left;
+    border:1px solid transparent;
+    margin: 1px 0px 0px 2px;
+}
+.vc_apic:hover {
+    border-color: #273a5d;
+    cursor: pointer;
+}
+.vc_space {
+    margin-left: 10px;
+}
+.vc_pic_vk{
+    background: url(/engine/inc/include/p_construct/editor/images/vk2_small.png) no-repeat;
+}
+.vc_pic_yandex{
+    background: url(/engine/inc/include/p_construct/editor/images/yandex.png) no-repeat;
+}
+.vc_pic_yandex-tubes{
+    background: url(/engine/inc/include/p_construct/editor/images/yandex-tubes.png) no-repeat;
+}
+.vc_pic_view{
+    background: url(/engine/inc/include/p_construct/editor/images/preview.png) no-repeat;
+}
+.vc_pic_ed{
+    background: url(/engine/inc/include/p_construct/editor/images/gtk-edit.png) no-repeat -1px -1px;
+}
+.vc_pic_cp{
+    background: url(/engine/inc/include/p_construct/editor/images/warning.png) no-repeat;
+}
+.vc_pic_nocp{
+    background: url(/engine/inc/include/p_construct/editor/images/no-warning.png) no-repeat;
+}
+.vc_pic_err{
+    background: url(/engine/inc/include/p_construct/editor/images/stock_error.png) no-repeat;
+}
+.vc_pic_noerr{
+    background: url(/engine/inc/include/p_construct/editor/images/stock_error_no.png) no-repeat;
+}
+.vc_pic_rm{
+    background: url(/engine/inc/include/p_construct/editor/images/Close_Box_Red.png) no-repeat;
+}
+#vc_zHidden {
+    display: none;
+}
+.VcFooter {
+    
+}
+
+/* Добавление серии (блок) */
+.vc_AddPanel {
+    text-align: right;
+    clear: both;
+    width: 725px;
+    margin-top: 10px;
+}
+.vc_AddPanel span {
+    background: url(/engine/inc/include/p_construct/editor/images/vc_add_s.png) 4px 4px no-repeat;
+    padding: 5px 5px 5px 30px;
+    border: 1px solid silver;
+    border-radius: 3px;
+}
+.vc_AddPanel a {
+    font-weight: bold;
+    color: #272e23;
+    text-decoration: none;
+}
+.vc_AddPanel a:visited {
+    text-decoration: none;
+    color: #272e23;
+}
+.vc_AddPanel a:hover {
+    text-decoration: underline;
+}
+
+/* Добавление сборки (блок в футере) */
+.vc_AddPanelFooter {
+    clear: both;
+    margin-top: 10px;
+}
+.vc_AddPanelFooter span {
+    background: url(/engine/inc/include/p_construct/editor/images/go-bot.png) 0px 0px no-repeat;
+    padding: 5px 5px 5px 30px;
+    border: 1px solid silver;
+    border-radius: 3px;
+    height:22px;
+}
+.vc_AddPanelFooter span:hover {
+    background-color: #658f41;
+}
+.vc_AddPanelFooter a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    height:22px;
+}
+.vc_AddPanelFooter a:visited {
+    text-decoration: none;
+    color: black;
+}
+.vc_AddPanelFooter a:hover {
+    color: white;
+}
+
+/* Панелька для сборок */
+.vc_zHead {
+    margin-bottom: 7px;
+}
+.vc_zHead span {
+    padding-left: 10px;
+}
+.vc_zname {
+    width: 220px;
+    max-width: 220px;
+    margin-left:5px;
+}
+.vc_sort {
+    width: 15px;
+    max-width: 15px;
+    margin-left: 10px;
+}
+.vc_ssort {
+    width: 120px;
+    max-width: 120px;
+    margin-left: 10px;
+}
+
+.vc_z_remove {
+    margin-left: 10px;
+    border:1px solid transparent;
+    width: 18px; height: 18px;
+    margin-bottom: -4px;
+    cursor: pointer;
+    max-width: 18px;
+}
+.vc_z_remove:hover {
+    border:1px solid #0e2447;
+}
+.vc_z_renaming {
+    margin-left: 4px;
+    border:1px solid transparent;
+    width: 18px; height: 18px;
+    margin-bottom: -4px;
+    cursor: pointer;
+    max-width: 18px;
+}
+.vc_z_renaming:hover {
+    border:1px solid #0e2447;
+}
+
+/* Дополнительные классы для разметки */
+.rcbold {
+    font-weight: bold;
+}
+
+/* Панелька для всех сборок */
+div.VcHPanel {
+    background: url(/engine/inc/include/p_construct/editor/images/flag_green.png) -3px 6px no-repeat;
+    width: 760px;
+    height: 48px;
+    padding: 4px 0px 16px 35px;
+    box-sizing: content-box;
+}
+.VcHPanel span.rcbigger{
+    margin-left: 12px;
+}
+.vc_Quality {
+    margin: 0px 2px 0px;
+    padding:0px 1px 0px;
+    border: 1px solid #132013;
+    border-radius: 5px;
+    background-color: #bb3c3c;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 14px;
+}
+.VcHPanel .rcactive {
+    background-color: #0d4307;
+}
+.vc_Quality:hover {
+    border-color: #87510e;
+    color: #87510e;
+    background-color: white;
+}
+.VcHPanel input, .VcHPanel select {
+    margin: 0px 4px 0px;
+}
+#vc_MinLen {
+    width: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+#vc_PlayerStyle {
+    width: 170px;
+}
+.vc_player_st_button {
+    width: 20px;
+    max-width: 20px;
+    min-height: 20px;
+    height: 20px;
+    /*background: url(/engine/inc/include/p_construct/editor/images/arrow-circle-down.png) 1px 1px no-repeat #cae6ef;*/
+    border: 1px black solid;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.vc_player_st_button:hover {
+    border-color: #0e2447;
+    /*background: url(/engine/inc/include/p_construct/editor/images/arrow-circle-down2.png) 1px 1px no-repeat white;*/
+}
+.VcHPanel div {
+    width: 100%;
+    height: 4px;
+}
+#vc_Tpl {
+    width: 275px;
+}
+#vc_Counter {
+    width: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.cv_nametpl_line {
+    border: 1px solid #b6c1b2;
+    cursor: pointer;
+    margin:3px 3px 6px 3px;
+    padding:3px;
+    font-family: monospace;
+    font-size:14px;
+    border-radius:2px;
+}
+/* */
+#vc_editor_text {
+    width: 100%;
+    resize: none;
+    font-size: 14px;
+    
+}
+
+/* Блок ожидания загрузки */
+.VcFindPreload {
+    width: 100%;
+    text-align: center;
+}
+
+/* Для шаблона результатов поиска */
+.vc-search-results{width:100%;}
+.vc-search-results * {font-size: 12px;}
+/*
+#vc-searchr-tabs {width:100%;border-bottom:2px solid #0e3c6a;padding:0 !important; margin:0 !important;}
+#vc-searchr-tabs ul {margin: 3px 10px 2px !important; height:100%; list-style-type:none; padding:0 !important; }
+#vc-searchr-tabs ul li {margin: 0px 0px 3px !important; padding: 2px 15px 2px !important; border: 1px solid #0e3c6a; display: inline; border-radius:4px 4px 0 0; background-color:#6389af; color:white; font-weight:bold; cursor:pointer;}
+#vc-searchr-tabs ul li span {border:1px solid black; background-color:#f2f8ff; padding:0 3px 0 !important; color:black; margin:0 !important;}
+#vc-searchr-tabs ul li.current { border-bottom: 1px solid transparent; color:black; background-color: #8b3c6f; }
+
+#vc-searchr-info {width:100%; margin:5px; text-align:right; font-size:12px;}
+#vc-searchr-info a {text-decoration: none; color:#000000; border:1px solid #777766; background-color:#eaeac5; border-radius: 3px; padding:1px;}
+#vc-searchr-info a.current {background-color: #132013; color:#eaeac5;}
+
+.vc-search-results > p {margin-top:30px; padding:10px 30px 5px; color:#d7080e; border:1px solid #f5f5f5;}
+.vc-search-results > p a {display:block; text-align:right; color:#0894d7;}
+
+.vc-searchr-item {width:98%; float:left; margin:10px 5px 0 !important;}
+.vc-searchr-item a > img {float:left; margin: 0 8px 3px 0; border-radius:3px;}
+.vc-searchr-item > strong {overflow:hidden; display:block; height:17px; border-bottom:1px dotted gray; line-height: 20px;}
+.vc-searchr-item ul {margin: 3px 0 0 10px; list-style-type:none; padding:0; text-align:right;}
+.vc-searchr-item ul li {margin: 0px 0px 3px; padding: 0 2px 0; display: block; float:right; color:#474d53; width:110px}
+.vc-searchr-item #vc-searchr-pvkontakte {height:52px; font-size:11px; color:#7493b0; text-align:justify; clear:right; }
+.vc-searchr-item #vc-searchr-pyandex {height:20px; font-size:11px; color:#7493b0; text-align:justify; clear:right; }
+.vc-searchr-buttons { float:right; cursor: pointer; }
+.vc-searchr-buttons button { border:1px solid black; padding:2px; font-size:11px; border-radius:2px; }
+.vc-searchr-preview {position:fixed; top:0; width:100%; height:100%; background: url(/engine/inc/include/p_construct/img/opacity-60.png) repeat; z-index: 999;}
+.vc-searchr-previewInner {width:320px; height:260px;text-align:right;margin:0 auto 0;}
+.vc-searchr-previewInner img {border:2px solid #0e3743;border-radius: 3px;}
+.vc-searchr-previewInner a.vc_asb {background-color:white;padding:2px;border-radius:17px;color:#3a3a3a;font-size:12px;border:2px solid #3a3a3a; display:block; margin:1px; width:48px; float:right;}
+.vc-searchr-item .vc-searchr-ythumb {width:120px; height:90px; background-color: black; float:left; margin: 0px 5px 5px 0px; text-align: center; display:table-cell; vertical-align:middle;}
+.vc-searchr-item .vc-searchr-ythumb img {}
+*/
+
+/* ====================== новое окошко поиска ========================== */
+#s_dialog {font-size: 14px !important;}
+#s_dialog #s_topPanel {border:1px dotted #bcc2c3; background-color: #e9f3f4; padding:3px; border-radius: 3px;}
+#s_dialog .s_topLeft {float:left; border:1px solid transparent; position:relative; cursor:pointer;}
+#s_dialog .s_topLeft:hover {border:#d9d9d9 1px solid; box-shadow: 0 0 5px rgba(0,0,0,0.5);}
+#s_dialog .s_topRight {float:right;}
+#s_dialog .s_topRight a { font-weight:bold; outline:none; color: #646464;}
+#s_dialog .s_topRight a.s_current {color:black;}
+#s_dialog .s_clear {clear:both;}
+#s_dialog .s_selectList {display:none; z-index:200; position:absolute; border:1px solid #837c77; background-color:white; border-radius:3px; padding:2px; cursor:pointer;}
+#s_dialog .s_selectList .s_listItem {border-radius:3px; border:1px solid transparent; padding: 0 5px 0;}
+#s_dialog .s_selectList .s_listItem:hover {border:1px solid #6a482b;}
+
+/* Диалог сообщений сервера */
+#s_dialog .s_alert {margin:10px 0 10px; padding:5px; border:1px solid #bc2b2b; background-color:#f2dddd; border-radius:3px; }
+#s_dialog .s_alert .s_alertClose {cursor: pointer; color:#12519d; float:right; background-image: url('img/Close.png'); width:16px; height:16px; margin:4px;}
+#s_dialog .s_alert .s_alertClose:hover {text-decoration: underline; background-image: url(img/Close-hover.png);}
+/* Результат поиска */
+#s_dialog .s_sItem {border:1px #d8d8d8 solid; margin:10px 0 0; border-radius:3px; border-right:4px solid #ca5b38; min-height:95px;}
+#s_dialog .s_sItem .s_preview {width:120px; height:90px; background-color: black; float:left; margin: 0px 5px 5px 0px; text-align: center; display:table-cell; vertical-align:middle; border-radius:4px 0 0 4px; position:relative;}
+#s_dialog .s_sItem .s_preview .s_prev_add {width:16px; height:16px; position:absolute; background-image: url(img/plus16g.png); top:3px; left:3px; cursor:pointer;}
+#s_dialog .s_sItem .s_preview .s_prev_add:hover {background-image: url(img/plus16g-hover.png);}
+#s_dialog .s_sItem .s_preview .s_prev_edit {width:16px; height:16px; position:absolute; background-image: url(img/plus16.png); top:3px; left:3px; cursor:pointer;}
+#s_dialog .s_sItem .s_preview .s_prev_edit:hover {background-image: url(img/plus16-hover.png);}
+#s_dialog .s_sItem .s_preview img {width:120px; height:90px; border-radius:4px; left:0; top:0;}
+#s_dialog .s_sItem .s_preview .s_previewIssetBig {cursor:pointer;}
+#s_dialog .s_sItem .s_mDiv {min-height:67px;}
+#s_dialog .s_sItem .s_mDiv .s_title {font-weight:bold; display:inline; color:#12519d;}
+#s_dialog .s_sItem .s_mDiv .s_title a {color:#12519d;}
+#s_dialog .s_sItem .s_mDiv .s_text {color: #262626; padding:0px 2px 0px; font-size:13px;}
+#s_dialog .s_sItem .s_pInfo {float:right; border-bottom:1px #d3e9eb solid; border-left:1px #d3e9eb solid; width:120px; height:60px; margin:2px; padding:2px; overflow: hidden;}
+#s_dialog .s_sItem .s_pInfo div {font-size:14px; font-family: arial; padding:1px 5px 1px 20px; cursor:default; width:1000%; height:18px;}
+#s_dialog .s_sItem .s_pInfo .s_pInfoTube {background:url(img/tube.png) no-repeat;}
+#s_dialog .s_sItem .s_pInfo .s_pInfoDuration {background:url(img/duration.png) no-repeat;}
+#s_dialog .s_sItem .s_pInfo .s_pInfoSize {background:url(img/size.png) no-repeat;}
+#s_dialog .s_sItem .s_iButtons {margin: 5px; white-space: nowrap; }
+#s_dialog .s_sItem .s_iButtons button {padding: 2px 4px 2px; border:1px #696969 solid; background-color: white; font-size:12px; color:black; text-decoration: none; border-radius:2px;}
+#s_dialog .s_sItem .s_iButtons button:hover {color:#232323; border-color: #c3c3c3; }
+/* Разные цвета кнопок */
+#s_dialog .s_sItem .s_iButtons .s_iB_view {background-color: #f7fdd4;}
+#s_dialog .s_sItem .s_iButtons .s_iB_chk {background-color: #f2f2f2;}
+#s_dialog .s_sItem .s_iButtons .s_iB_addp {background-color: #f0f9fd;}
+#s_dialog .s_sItem .s_iButtons .s_iB_ins {background-color: #ffefe0;}
+/* К сожалению не найдено */
+#s_dialog #vc-searchr-novideom {min-height:64px; background:url(img/sad.png) no-repeat; padding:3px 0 0 75px; color:#8e263c; margin-top:10px;}
+#s_dialog #vc-searchr-novideom a {color:#12519d;}
+/* Доступна новая версия */
+a.vc_new_version {display:none; font-size:13px; padding:3px 3px 3px 24px; margin:0 8px 0; background: url('img/update.png') #deecf0 3px no-repeat; border-radius:3px; border:1px #25819e solid; text-decoration: none; color: #d97c47;}
+a.vc_new_version:hover {color:#c6c6c6;}
+
+
+/* --- Найденные элементыvc_list_button  */
+.vc-igood {}
+.vc-ifilt { display:none; }
+/* // Для шаблона результатов поиска */
+
+
+/* блок списка ошибок */
+#VcErrorsBlock {
+    color: #c92c15;
+    padding:4px 4px 4px 0;
+}
+
+.VcErrorAlert {border:1px solid #b25b7a; background-color: #f2d8dd; color:black; border-radius: 3px;}
+
+/* Диалог переименования серий в сборке */
+#VcRenamingDialog #vc_rn_template {width: 353px; max-width: 353px;}
+#VcRenamingDialog #vc_rn_counter {width: 50px; max-width: 50px;}
+#VcRenamingDialog #vc_rn_ddd {width: 50px; max-width: 50px;}
+#VcRenamingDialog #vc_rm_list {border:1px solid silver; border-radius: 4px;}
+#VcRenamingDialog #vc_rm_list span {padding: 3px;}
+#VcRenamingDialog #vc_rm_list .tdTHead {border-bottom: 1px solid silver;}
+#VcRenamingDialog #vc_rm_list .tdNum {float:left; width:10%; color: #2b60a7;}
+#VcRenamingDialog #vc_rm_list .tdLeft {float:left; width:42%; color: #6e7277; border-left: 1px solid silver;}
+#VcRenamingDialog #vc_rm_list .tdRight {float:left; width:42%; color: #6e7277; border-left: 1px solid silver;}
+
+/* Всплывающее меню поиска по конкретному тюбу */
+.vc_pmenu_rel {position: relative; width:0px;}
+.vc_pmenu {background-color: #f6f7ee; position: absolute; width:400px; height: 125px;
+        border:2px solid #345072; border-radius: 3px; padding:4px; overflow-y: scroll; 
+        left:-395px; top:7px;}
+.vc_pmenu .vc_yandeTube {border:1px solid #c28f84; padding:2px; margin: 2px 4px 2px; 
+        float:left; border-radius: 3px; height:17px; vertical-align: middle;
+        cursor: pointer; box-sizing: content-box !important;}
+.vc_pmenu .vc_yandeTube.vc_dedicated {background-color: #f7cab7}
+
+.VcHPanel #vc_Import {background: url(img/import.png) no-repeat 1px 1px;}
+.VcHPanel #vc_Export {background: url(img/export.png) no-repeat 1px 1px;}
+.vc-btn16 {width:20px !important; height:20px !important; vertical-align: middle; border: 2px solid #e2e8ea; border-radius: 3px;}
+.vc-btn16.vc-btn16-success {border-color: #c9691b;}
+
+/* Фикс списка тюбов в DLE10.2+ */
+#vc_hs_div { overflow: hidden; }
+
+/* Доступно обновление */
+#VcNewVersion {
+    font-size: 11px;
+    color: #c63e04;
+    display:none;
+}
+
+#VcNewVersion:hover {color: silver;}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension>
+    <!-- Имя и описание расширения: -->
+    <name>Рекламны модуль (free)</name>
+    <description>Простой модуль для добавления рекламы в сборку конструктора в начале показа (бета версия).</description>
+	<!-- Ссылка на страницу: -->
+    <link>http://ralode.com/reckama-on-video-free.html</link>
+    <!-- Имя на латинском, определяющее название файла и название класса: -->
+    <alt>Reclame</alt>
+    <!-- Стандартные настройки: -->
+    <config>
+		<enabled type="enum" 
+                        name="Статус"
+                        description = "Позволяет включить или отключить расширение"
+                        list="0|Отключено||1|Включено" preg_match="/^[01]$/">1</enabled>
+                <code type="textarea"
+                        name="Код"
+                        description = "Вставьте сюда HTML-код рекламмного блока"
+                        rows = "8"
+                        width = "100%">Код рекламмы тут</code>
+    </config>
+</extension>

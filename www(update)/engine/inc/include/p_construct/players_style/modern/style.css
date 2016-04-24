@@ -1,0 +1,100 @@
+.vcsel_wrap {margin-bottom:5px; padding:5px;}
+.vcsel_wrap select { display:none;}
+.vcsel_imul {width:300px; margin:0px auto;} /* Ширина селекта 1/3 */
+.vcsel_imul .vcsel_selected {
+    background:#fff; border:1px solid #bbb; padding:3px 6px; font-size:13px;
+    font-family:Times; cursor:pointer; position:relative; 
+}
+.vc_visor { overflow: hidden; margin-right:18px;}
+.vc_selected-text { width:2999px;}
+.vcsel_imul.act .vcsel_selected {background:#efefef;}
+.vcsel_selected .vcsel_arrow{
+    height:100%;
+    width:20px;
+    background:url('img/arrow1.png') 50% 50% no-repeat;
+    position:absolute;
+    top:0px;
+    right:0px;    
+}
+.vcsel_imul:hover .vcsel_selected .vcsel_arrow{
+    background-color:#e0e0e0;
+    border-left:1px solid #bbb;
+}
+.vcsel_imul.act .vcsel_selected .vcsel_arrow{
+    background-color:#e0e0e0;
+    border-left:1px solid #bbb;
+}
+.vcsel_imul .vcsel_options{
+    background:#fff;
+    border:1px solid #dbdbdb;
+    border-top:none;
+    overflow:auto;
+    overflow-x: hidden;
+    position:absolute;
+    width:298px; /* Ширина селекта 2/3 - на пикселя меньше*/
+    display:none;
+    z-index:10;
+}
+.vcsel_imul .vcsel_options.vc_scrolling{
+    height:140px;
+}
+.vcsel_options .vcsel_option{
+    padding:3px 4px;
+    font-size:13px;
+    font-family:Times;
+    border:1px solid #fff;
+    border-right:none;
+    border-left:none;
+}
+.vcsel_options .vcsel_optgroup {padding:4px 4px; font-size:14px; font-family:Times; font-weight: bold;}
+.vcsel_options .vcsel_option:hover {border-color:#dbdbdb; cursor:pointer;}
+.vcsel_options .vcsel_option.vcsel_ed {background:#dbdbdb;border-color:#dbdbdb;}
+.vcsel_options .vc_space {padding-left:10px;}
+.vcsel_imul.act .vcsel_selected {background:#fff;}
+
+/*second variant*/
+.vc_sec .vcsel_imul .vcsel_selected .vcsel_arrow{
+    background-image:url('img/arrow2.gif');
+}
+
+/* Скругление */
+.vc_round .vcsel_imul .vcsel_selected {border-radius:5px;}
+.vc_round .vcsel_imul .vcsel_selected .vcsel_arrow {border-radius:0 5px 5px 0;}
+.vc_round .vcsel_imul .vcsel_options {
+    border-radius:0 0 5px 5px; 
+    width:294px; /* Ширина селекта 3/3 - на 6 пикселей меньше*/
+    margin-left:2px;
+} 
+
+/* Розовая расцветка */
+.vc_rose .vcsel_imul .vcsel_selected {border-color:#FFAD99;}
+.vc_rose .vcsel_imul:hover .vcsel_selected .vcsel_arrow,
+.vc_rose .vcsel_imul.act .vcsel_selected .vcsel_arrow{
+    background-color:#FFD6CC; border-left:1px solid #FFAD99;
+}
+.vc_rose .vcsel_options .vcsel_option:hover, 
+.vc_rose .vcsel_options .vcsel_option.vcsel_ed{
+    background:#FF9980; border:1px solid #FF704D; color:#fff;
+}
+
+/* Синяя расцветка */
+.vc_blue .vcsel_imul .vcsel_selected {border-color:#C0CAD5;}
+.vc_blue .vcsel_imul:hover .vcsel_selected .vcsel_arrow,
+.vc_blue .vcsel_imul.act .vcsel_selected .vcsel_arrow{
+    background-color: #c8dee9; border-left:1px solid #d2dbe0;
+}
+.vc_blue .vcsel_options .vcsel_option:hover, 
+.vc_blue .vcsel_options .vcsel_option.vcsel_ed{
+    background:#587da1; border:1px solid #2a5883; color:#fff;
+}
+
+/* Зеленая{%loader(ID_TEXT)%} расцветка */
+.vc_green .vcsel_imul .vcsel_selected {border-color: #9ebe9c;}
+.vc_green .vcsel_imul:hover .vcsel_selected .vcsel_arrow,
+.vc_green .vcsel_imul.act .vcsel_selected .vcsel_arrow{
+    background-color: #a9d1a6; border-left:1px solid #9ebe9c;
+}
+.vc_green .vcsel_options .vcsel_option:hover, 
+.vc_green .vcsel_options .vcsel_option.vcsel_ed{
+    background:#60af5b; border:1px solid #41913c; color:#fff;
+}

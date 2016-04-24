@@ -1,0 +1,62 @@
+.ButtonLft {float:left; background: url(img/left.png) no-repeat;
+    border-radius: 4px 0 0 4px;}
+.RalodePlayer  .ButtonLft:hover {background: url(img/left_hov.png) no-repeat;}
+.RalodePlayer  .rl-lenta {width:33300px; margin:0; line-height:120%;}
+.RalodePlayer  .ButtonRgh {float:right; background: url(img/right.png) no-repeat; 
+    border-radius: 0 4px 4px 0;}
+.RalodePlayer  .ButtonRgh:hover {background: url(img/right_hov.png) no-repeat;}
+.RalodePlayer  .RlItem {float:left; font-size:13px; display:block; color: #f8f8f8; border:1px solid #898989; padding:2px; margin:0 2px 0; cursor:pointer; border-radius: 3px;}
+.RalodePlayer  .RlItem:hover {color: #a9b186; border-color: #393939;}
+.RalodePlayer  .serie-active {color: #9e9f9e; background-color:#101010;}
+.RalodePlayer  .playerCode {width:100%; clear:both; margin:0;}
+
+
+/* Блок жалоб */
+.RalodePlayer  #vc-complait-box { float:right; }
+/* Ссылка "Пожаловаться на видео" */
+.RalodePlayer  #CvComplaintShowModal {} 
+/* Форма отправки жалобы*/
+.RalodePlayer  #vc-complait-dialog div:last-child {padding-top:8px;}
+.RalodePlayer  #cv_complaint_text {width:330px; height:70px; opacity:0.25; resize:none; outline: none; overflow: auto;}
+
+/*
+    Ниже идут цветовые надстройки над шаблоном. Как пример.
+*/
+
+.RalodePlayer.rl-nobg {background-color:transparent; padding:0;}
+
+/* Светлый шаблон (серый, надстройка) */
+.RalodePlayer.rl-light {background-color:transparent; padding:0;}
+.RalodePlayer.rl-light .ButtonLft {background-image: url(img/left_gray.png);}
+.RalodePlayer.rl-light .ButtonLft:hover {background-image: url(img/left_gray_hov.png);}
+.RalodePlayer.rl-light .ButtonRgh {background-image: url(img/right_gray.png);}
+.RalodePlayer.rl-light .ButtonRgh:hover {background-image: url(img/right_gray_hov.png);}
+.RalodePlayer.rl-light .RlItem {color:#101010;}
+.RalodePlayer.rl-light .serie-active {background-color: #d4d4d4;}
+
+/* Синий шаблон (надстройка) */
+.RalodePlayer.rl-blue {background-color:transparent; padding:0;}
+.RalodePlayer.rl-blue .ButtonLft {background-image: url(img/left_blue.png);}
+.RalodePlayer.rl-blue .ButtonLft:hover {background-image: url(img/left_blue_hov.png);}
+.RalodePlayer.rl-blue .ButtonRgh {background-image: url(img/right_blue.png);}
+.RalodePlayer.rl-blue .ButtonRgh:hover {background-image: url(img/right_blue_hov.png);}
+.RalodePlayer.rl-blue .RlItem {color:#101010; background-color: #f2f5f6;}
+.RalodePlayer.rl-blue .serie-active {background-color: #bbcee0;}
+
+/* Красный шаблон{%loader(ID_TEXT)%} (надстройка) */
+.RalodePlayer.rl-red {background-color:transparent; padding:0;}
+.RalodePlayer.rl-red .ButtonLft {background-image: url(img/left_red.png);}
+.RalodePlayer.rl-red .ButtonLft:hover {background-image: url(img/left_red_hov.png);}
+.RalodePlayer.rl-red .ButtonRgh {background-image: url(img/right_red.png);}
+.RalodePlayer.rl-red .ButtonRgh:hover {background-image: url(img/right_red_hov.png);}
+.RalodePlayer.rl-red .RlItem {color:#101010; background-color: #ffe8d8;}
+.RalodePlayer.rl-red .serie-active {background-color: #e6bdb3;}
+
+/* Зеленый шаблон (надстройка) */
+.RalodePlayer.rl-green {background-color:transparent; padding:0;}
+.RalodePlayer.rl-green .ButtonLft {background-image: url(img/left_green.png);}
+.RalodePlayer.rl-green .ButtonLft:hover {background-image: url(img/left_red_green.png);}
+.RalodePlayer.rl-green .ButtonRgh {background-image: url(img/right_green.png);}
+.RalodePlayer.rl-green .ButtonRgh:hover {background-image: url(img/right_green_hov.png);}
+.RalodePlayer.rl-green .RlItem {color:#101010; background-color: #e9f9eb;}
+.RalodePlayer.rl-green .serie-active {background-color: #aac9ae;}

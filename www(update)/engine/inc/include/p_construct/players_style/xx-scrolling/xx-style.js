@@ -51,7 +51,7 @@ RalodePlayer.serielistInit = function () {
         var html = "";
         for (var num in z.items) {
             var val = z.items[num];
-            html += '<div class="RlItem '+(num==this.curr_num ? ' serie-active' : '')+'" onclick="RalodePlayer.selectSerie('+val.parent+','+num+');" id="serie_'+num+'">'+val.sname+'</div>';
+            html += '<div class="RlItem '+(num==this.curr_num ? ' serie-active' : '')+'" onclick="RalodePlayer.selectSerie('+val.parent+',\''+num+'\');" id="serie_'+num+'">'+val.sname+'</div>';
         }
         $("#rl-lenta-bottom").html(html);
         $("#rl-buttons-bottom").show();
@@ -91,7 +91,7 @@ RalodePlayer.addEvent('changeSerie', function(zid, sid, num){
     $('#rl-lenta-top .RlItem').removeClass('serie-active');
     $('#zborka_'+zid).addClass('serie-active');
     $('#rl-lenta-bottom .RlItem').removeClass('serie-active');
-    $('#serie_'+num).addClass('serie-active');
+    $('#serie_'+num.replace('.','\\.')).addClass('serie-active');
 });
 
 (function($this){

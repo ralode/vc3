@@ -100,7 +100,7 @@ RalodePlayer.serielistShow = function (show) {
                 inRow = 0;
                 html += "</ul><ul>";
             }
-            html += '<li'+(num==RalodePlayer.curr_num ? ' class="rl-active"' : '')+' onclick="RalodePlayer.selectSerie('+val.parent+','+num+');">'+val.sname+'</li>';
+            html += '<li'+(num==RalodePlayer.curr_num ? ' class="rl-active"' : '')+' onclick="RalodePlayer.selectSerie('+val.parent+',\''+num+'\');">'+val.sname+'</li>';
             inRow++;
         }
         html += "</ul>";

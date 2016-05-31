@@ -22,7 +22,7 @@ class VideoTubes {
             "name_html" => "<font color='#004080'><b>В</b>контакте</font>",
             "alt_name" => "vkv",
             "url" => "http://vk.com",
-            "player" => '<iframe src="{url}" width="100%" height="100%" frameborder="0" class="item_vkv_video"></iframe>'
+            "player" => '<iframe src="{url}" width="100%" height="100%" frameborder="0" class="item_vkv_video" allowfullscreen></iframe>'
         ),
         2 => array (
             "name" => "YouTube",
